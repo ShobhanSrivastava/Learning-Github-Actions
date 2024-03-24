@@ -30,7 +30,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }} # Create repo secret in github instead of environment secret
 
       - name: Build docker image
-        run: docker build -t sample-express/nodejs-app:latest .
+        run: docker build -t sample-nodejs-app:latest .
 
       - name: Push docker image
         run: docker push ${{ secrets.DOCKER_USERNAME }}/sample-nodejs-app:latest
