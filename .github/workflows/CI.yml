@@ -33,4 +33,4 @@ jobs:
         run: docker build -t sample-express/nodejs-app:latest .
 
       - name: Push docker image
-        run: docker push sample-express/nodejs-app:latest
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/sample-nodejs-app:latest
